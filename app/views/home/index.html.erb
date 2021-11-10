@@ -1,0 +1,15 @@
+
+
+
+<h1> Welcome to proton....! </h1>
+
+<% if current_user.present? %>
+
+<%= button_to "logout", destroy_user_session_path, method: :delete  %>
+
+  <% else %>
+  
+  <%= link_to "Login to admin", "/admin" %> <br>
+  <%= link_to "Login to User", "/users/sign_in" %>
+
+<% end %>
